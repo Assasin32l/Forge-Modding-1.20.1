@@ -1,6 +1,7 @@
 package net.assasin32l.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.assasin32l.tutorialmod.block.ModBlocks;
 import net.assasin32l.tutorialmod.item.ModCreativeModTabs;
 import net.assasin32l.tutorialmod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,6 +26,7 @@ public class TutorialMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
